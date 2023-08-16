@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>云山-备忘录</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="cj/sccess.css">
+</head>
+<body>
+<div class="container">
+  <div class="header"><!-- 站点标题栏 -->
+    <h1> <a href="https://www.yunshan.cc">云山</a>` <a href="../cc/beiwang.html">备忘录</a> <span id="sitemap-icon">🇷</span> </h1>
+  </div>
+  <div class="navigation"><!-- 站点导航栏 -->
+    <p>
+		<!-- 虚则 --><a href="../cc/wda.html">闻道</a> \ 
+		<!-- 疑而 --><a href="../cc/jhb.html">解惑</a> \ 
+		<!-- 静至 --><a href="../cc/jhc.html">金花</a> \ 
+		<a href="../cc/rmd.html">入门</a><!-- 道体 --> \ 
+		<a href="../cc/cse.html">处世</a><!-- 保己 --> 
+    </p>
+    <p class="search-container"><!-- 站点搜索框--> 
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" placeholder="输入关键词..">
+    </p>
+  </div>
+  <div id="articles"><!-- 动态生成文章列表 --> 
+  </div>
+  <div class="search-container">
+    <input type="text" class="search-input no-autoscale" oninput="searchTitles()" placeholder="输入关键词..">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <div id="sitemap-content" style="display:none;"><!-- 隐藏的目录 -->
+    <h2>存稿</h2>
+    <ul>
+      <li><a href="https://x.yunshan.cc">调试</a></li>
+      <li><a href="https://w.yunshan.cc">样式</a></li>
+      <li><a href="https://m.yunshan.cc">暂存</a></li>
+    </ul>
+  </div>
+  <div class="footer"><!-- 一世道人家 修行天地中 踏过离火劫 万朵金花开 -->
+    <p>
+    <div id="visitor-location">正在获取地理位置...</div>
+    <div id="visit-count">正在获取访问次数...</div>
+    <a href="#top" class="back-to-top">Top</a>
+    </p>
+  </div>
+</div>
+<script src="cj/Sortable.min.js"></script> 
+<script>
+    const articlesData = [
+        {
+            title: "道非常道，名非常名。无名天始，有名物生。",
+            intro: "道家三句意：名为道，实非道，是名道。道生无，无生有，天地始生。",
+            contentFile: "article1.html"
+        },
+        {
+            title: "内视其渺，反观其角。异名同出，是谓玄妙。「玄之又玄，众妙之门」",
+            intro: "内视反观",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题2",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题2",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+		{
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+        {
+            title: "文章标题1",
+            intro: "文章1的简介...",
+            contentFile: "article1.html"
+        },
+    ];
+   	const articlesContainer = document.getElementById('articles');
+    const searchIcon = document.querySelector('.search-icon');
+    const searchInput = document.querySelector('.search-input');
+    const sitemapIcon = document.getElementById('sitemap-icon');
+    const sitemapContent = document.getElementById('sitemap-content');
+	const isMobile = window.matchMedia("(max-width: 768px)").matches;
+</script> 
+<script src="cj/jjsejj.js"></script>
+</body>
+</html>

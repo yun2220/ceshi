@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/* CSS Document */
+html { /* 根据屏幕宽度自动计算根字体大小，可根据需要进行调整 */
+    font-size: 62.5%; /* 1rem = 10px，相当于设置基准字体大小为10px */
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body {
+    font-family: "SimSun", "宋体", Arial, sans-serif; /* 设置页面字体为无衬线式字体 */
+    margin: 0;/* 去除页面的默认边距和内边距 */
+    padding: 0;
+    font-size: 1.6rem; /* 相当于设置基准字体大小为16px */
+	font-weight: normal; /* 禁止字体加粗 */
+    letter-spacing: 0.1em; /* 字体间距 */
+    background-color: #F7F7F7; /* 默认背景颜色为白色 */
+    color: #333333; /* 设置默认文本颜色为黑色 */
+}
+@media (prefers-color-scheme: dark) { /* 深色模式下的样式 */
+body {
+    background-color: #333333; /* 设置深色模式下的背景颜色为暗灰色 */
+    color: #D3D5D7; /* 设置深色模式下的文本颜色为白色 */
+}
+.article { /* 设置深色模式下的细线颜色 */
+	--line-color: #555555;
+}
+.search-input { /* 在这里设置深色模式下的搜索框样式 */
+    background-color: #333333; /* 设置背景色为深色 */
+    color: #E3E5E7; /* 设置文本颜色为浅色 */
+    border: 1px solid #F3F5F7; /* 设置边框颜色为浅色 */
+  }
+}
+@media (prefers-color-scheme: light) { /* 浅色模式下的样式 */
+body {
+    background-color: #F5F7F9; /* 设置浅色模式下的背景颜色为白色 */
+    color: #353739; /* 设置浅色模式下的文本颜色为黑色 */
+}
+.article { /* 设置浅色模式下的细线颜色 */
+	--line-color: #999999;
+}
+.search-input { /* 在这里设置浅色模式下的搜索框样式 */
+    background-color: #F5F7F9; /* 设置背景色为浅色 */
+    color: #353739; /* 设置文本颜色为深色 */
+    border: 1px solid #353739; /* 设置边框颜色为深色 */
+  }
+}
+.container {
+    max-width: 77rem; /* 相当于设置最大宽度 */
+    width: 95%; /* 相当于设置宽度为父容器的 */
+    margin: 0 auto; /* 水平居中容器 */
+}
+.header {
+    text-align: center; /* 文字居中对齐 */
+    padding: 5rem 0 0 0; /* 上内边距，下左右内边距 */
+}
+.header h1 {
+    font-size: 2.1rem; /* 设置标题字体大小 */
+    margin: 0; /* 去除标题的默认外边距 */
+}
+.navigation {
+    text-align: center; /* 文字居中对齐 */
+    padding: 0 0 1rem 0; /* 下内边距，左右内边距 */
+}
+.navigation p {
+    font-size: 1.6rem; /* 设置标题字体大小 */
+    margin: 0; /* 去除标题的默认外边距 */
+    padding: 0.7rem 0 5rem 0; /* 设置文章的上内距,下内边距 */
+}
+.footer {
+    padding: 2rem 0;/* 设置底栏上内边距 */
+    text-align: center; /* 文字居中对齐 */
+    margin-top: 3rem; /* 设置底栏上外边距 */
+}
+.footer p{
+	font-size: 1.5rem !important;
+}
+.article {
+    padding: 2rem; /* 设置文章的内边距为2rem */
+    border: none; /* 移除默认边框 */
+    border-bottom: 0.1px solid var(--line-color); /* 底部边框的实线边框和颜色动态变化 */
+    cursor: default; /* 鼠标悬停在文章上时形状不变 */
+}
+.article h2 {
+    font-size: 1.6rem; /* 设置文章标题字体大小 */
+    margin: 0; /* 去除文章标题的默认外边距 */
+}
+.article .intro {
+    display: none; /* 初始状态下隐藏文章的简介部分 */
+    margin-top: 0.5rem; /* 简介上方外边距 */
+}
+.article .content {
+    display: none; /* 初始状态下隐藏文章的详细内容部分 */
+    margin-top: 1rem; /* 上方外边距 */
+    word-wrap: break-word; /* 	禁止超出父系框的宽度 */
+    overflow-wrap: break-word; /* 允许单词内换行 */
+}
+.article .intro {
+    font-size: 1.4rem; /* 文章简介的字体大小 */
+}
+.article .content {
+    font-size: 1.5rem; /* 文章内容的字体大小 */
+}
+.footer {
+	font-size: 1.4rem;
+    padding: 2rem 0;/* 设置底栏上内边距 */
+    text-align: center; /* 文字居中对齐 */
+    margin-top: 3rem; /* 设置底栏上外边距 */
+}
+.footer p {
+	font-size: 1.4rem !important;
+}
+pre {
+    font-family: "SimSun", "宋体", Arial, sans-serif;
+    font-size: 1.5rem; /* 文章内容的字体大小 */
+    white-space: pre-wrap; /* 禁止溢出，换行 */
+    line-height: 1.6; /* 设置行高 */
+	font-weight: normal; /* 禁止字体加粗 */
+}
+a {
+    text-decoration: none; /* 移除下划线 */
+    color: inherit; /* 继承父元素的文本颜色 */
+}
+a:hover {
+    text-decoration: none; /* 移除下划线 */
+    color: inherit; /* 继承父元素的文本颜色 */
+}
+/* 搜索样式注解：*/
+.navigation {
+    display: flex; /* 将导航栏内容排列成一行 */
+    justify-content: center; /* 水平居中导航栏内的元素 */
+    align-items: center; /* 垂直居中导航栏内的元素 */
+    gap: 1rem; /* 设置导航栏内元素之间的间隔为1个rem */
+}
+.search-container {
+    display: flex; /* 将搜索容器内的元素排列成一行 */
+    align-items: center; /* 垂直居中搜索容器内的元素 */
+}
+.search-results {
+    display: none; /* 初始状态下隐藏搜索结果列表 */
+    padding: 1rem; /* 设置搜索结果列表的内边距为1rem */
+    border: 0.1rem solid #ccc; /* 设置搜索结果列表的边框为实线边框 */
+    max-height: 36rem; /* 设置搜索结果列表的最大高度为360px */
+    overflow-y: auto; /* 当搜索结果列表内容超过最大高度时，显示垂直滚动条 */
+}
+.search-result-item {
+    cursor: pointer; /* 设置搜索结果项的鼠标形状为手型，表明可点击 */
+    margin: 0.1rem 0; /* 设置搜索结果项之间的上下边距为0.1rem，左右边距为0 */
+}
+.search-icon {
+	font-size: 1rem; /* 设置图标大小为1像素 */
+    cursor: pointer; /* 设置搜索图标的鼠标形状为手型，表明可点击 */
+    margin-left: 0.1rem; /* 设置搜索图标与其前面元素之间的左边距为1rem */
+}
+.search-input {
+    display: none; /* 初始状态下隐藏搜索输入框 */
+    width: 11rem; /* 设置搜索输入框的宽度为12rem */
+	height: 1.4rem;/* 搜索框的高度为12rem */
+    padding: 0.1rem 0.3rem; /* 设置搜索输入框的内边距为0.1rem */
+	margin-left: 0.5rem; /* 设置搜索图标与其前面元素之间的左边距为1rem */
+    font-size: 1.2rem; /* 设置搜索输入框的字体大小为1.4rem */
+	border-radius: 0.3rem; /* 设置边框圆角 */
+}
+.search-container {
+    display: flex; /* 将搜索容器内的元素排列成一行 */
+    align-items: center; /* 垂直居中搜索容器内的元素 */
+    justify-content: center; /* 水平居中搜索容器内的元素 */
+}
+.search-input:focus {
+    outline: none;/* 去掉搜索框的蓝色阴影 */
+}
+img {
+  display: block; /* 设置图片为块级元素，使其独占一行 */
+  margin: 0 auto; /* 使用自动外边距使图片水平居中 */
+  border: none; /* 移除图片的边框 */
+  max-width: 24rem; /* 图片宽度不超过240px，保持持宽高比例不变 */
+}
+  .image-container {
+    float: left; /* 图片向左浮动 */
+    margin: 0 1rem 1rem 0; /* 图片左侧留出空白，文字环绕 */
+  }
+/* 样式化网站地图图标 */
+#sitemap-icon {
+  font-size: 0.1rem; /* 设置图标的字体大小为24像素 */
+  cursor: pointer; /* 鼠标悬停时，显示为手型光标 */
+}
+/* 样式化网站地图内容容器 */
+#sitemap-content {
+  width: 10rem; /* 设置容器的宽度 */
+  position: absolute; /* 使用绝对定位，脱离正常文档流 */
+  top: 5rem; /* 绝对位置距离顶部*/
+  right: 0.1rem; /* 绝对位置距离右边*/
+  padding: 0.5rem;  /* 内容与容器边缘的距离 */
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3); /* 设置容器的阴影效果 */
+}
+/* 定义回到顶部链接的样式 */
+:root {
+    --back-to-top-bg-light: #222; /* 浅色背景颜色 */
+    --back-to-top-color-light: #fff; /* 浅色文字颜色 */
+    --back-to-top-bg-dark: #999; /* 深色背景颜色 */
+    --back-to-top-color-dark: #333; /* 深色文字颜色 */
+}
+.back-to-top {
+    display: none; /* 最开始隐藏回到顶部链接 */
+    position: fixed; /* 将链接固定在页面上 */
+    bottom: 2rem; /* 距离页面底部 15 像素 */
+    right: 2rem; /* 距离页面右侧 15 像素 */
+    padding: 0.3rem 1rem; /* 内边距 */
+    text-decoration: none; /* 去掉文字下划线 */
+    border-radius: 0.3rem; /* 设置圆角边框 */
+}
+.back-to-top:hover {
+    background-color: var(--back-to-top-bg-dark); /* 使用CSS变量 */
+    color: var(--back-to-top-color-dark); /* 使用CSS变量 */
+}
+/* 移动端样式 */
+@media (max-width: 76.8rem) { /* 移动端缩小显示 */
+	.search-input.no-autoscale {
+        font-size: 1.3rem; /* 搜索框字体大小 */
+    }
+	body {
+        font-size: 1.6rem; /* 调整移动端的字体大小 */
+        margin: 0; /* 去除外边距 */
+    }
+    .container {
+        width: 95%; /* 调整移动端的容器宽度 */
+        margin: 0 auto; /* 水平居中 */
+    }
+    .search-input {
+        width: 85%; /* 搜索框移动端的宽度*/
+    }
+}
+/* 移动端 搜索框禁止缩放*/
+@viewport {
+    width: device-width;
+    initial-scale: 1;
+    maximum-scale: 1;
+    user-scalable: no;
+}
